@@ -1,6 +1,16 @@
-var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-if(width <= 768){
-    document.querySelector('.form-card').vanillaTilt.destroy();
+let formCard = document.querySelector('.form-card');
+VanillaTilt.init(formCard)
+
+var width = window.matchMedia("(max-width: 700px)")
+mobile(width)
+width.addListener(mobile)
+function mobile(width) {
+    if(width.matches){
+        formCard.vanillaTilt.destroy()
+    }
+    else {
+        VanillaTilt.init(formCard, )
+    }
 }
 // Animate Background icons
 var icns = document.getElementById("icns-div").children;
