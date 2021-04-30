@@ -1,0 +1,51 @@
+.form-card {
+    display: flex;
+    padding: 10px;
+    margin-top: 15vh;
+    width: fit-content;
+    border-radius: 10px;
+    background: linear-gradient(#1c194d, #30104e);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    opacity: 0;
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+form {
+    transform: translateZ(30px);
+}
+
+form img {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#wallet-addr {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+    #wallet-addr {
+        width: 300px;
+    }
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}

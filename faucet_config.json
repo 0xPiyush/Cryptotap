@@ -1,0 +1,14 @@
+{
+    "doge": {
+        "claim_timeout": 10800,
+        "withdraw_threshold": 2,
+        "prize_max": 0.0006,
+        "prize_min": 0.0002
+    },
+    "btc": {
+        "claim_timeout": 10800,
+        "withdraw_threshold": 2,
+        "prize_max": 0.0006,
+        "prize_min": 0.0002
+    }
+}
