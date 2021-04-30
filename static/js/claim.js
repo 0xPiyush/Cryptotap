@@ -1,3 +1,7 @@
+var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+if(width <= 768){
+    document.querySelector('.form-card').removeAttribute('data-tilt')
+}
 // Animate Background icons
 var icns = document.getElementById("icns-div").children;
 
