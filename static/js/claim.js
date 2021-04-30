@@ -1,6 +1,6 @@
 var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 if(width <= 768){
-    document.querySelector('.form-card').removeAttribute('data-tilt')
+    document.querySelector('.form-card').vanillaTilt.destroy();
 }
 // Animate Background icons
 var icns = document.getElementById("icns-div").children;
