@@ -1,14 +1,3 @@
-function mobileView(width) {
-    if (width.matches) {
-        document.getElementById('form-card').removeAttribute('data-tilt')
-        document.getElementById('form-card').removeAttribute('data-tilt-full-page-listening')
-    }
-  }
-  
-  var width = window.matchMedia("(max-width: 700px)")
-  mobileView(width)
-  width.addListener(mobileView)
-
 // Animate Background icons
 var icns = document.getElementById("icns-div").children;
 
