@@ -17,84 +17,86 @@
     <script>
         let coin = '{{ coin }}';
     </script>
-    <div class="banner-container" style="position: absolute; width: 100%; top: 120px;">
-        <iframe data-aa="1624312" src="//ad.a-ads.com/1624312?size=120x600" scrolling="no" style="
-        width:120px;
-        height:600px;
-        border:0px;
-        padding:0;
-        overflow:hidden;
-        " allowtransparency="true"></iframe>
-        <iframe data-aa="1624312" src="//ad.a-ads.com/1624312?size=120x600" scrolling="no" style="
-        width:120px;
-        height:600px;
-        border:0px;
-        padding:0;
-        overflow:hidden;
-        position: absolute;
-        right: 0%;
-        " allowtransparency="true"></iframe>
-    </div>
-    <div class="navbar">
-        <a href="/">
-            <div class="navbar-brand" data-tilt data-tilt-scale="1.2">
-                Cryptotap
-            </div>
-        </a>
-        <div class="trade-btn"><a href="https://www.binance.com/en-IN/register?ref=82653973" target="_blank"
-                class="gradient-btn cta">Trade Crypto</a></div>
-    </div>
-    <br>
-    <div class="text-center">
-        <center>
-            <div class="form-card">
-                <form id="claim-form" method="POST">
-                    <img class="mb-4" src={{ form_img }} width="150px">
-                    <h3 class="mb-3 font-weight-normal" style="color: white;">{{ form_title }}</h3>
-                    <label for="wallet-addr" class="sr-only" style="color: white;">{{ form_input_label }}</label>
-                    <input type="text" id="wallet-addr" name="wallet-addr" class="form-control"
-                        placeholder="Your {{ form_input_label }}" required autofocus>
-                    <center>
-                        <div class="g-recaptcha" data-sitekey="6LfVZ7UaAAAAALz724aZrsBi8eQ5G2NVTFLeUq0B"></div>
-                        <p>
-                            {% with messages = get_flashed_messages() %}
-                            {% if messages %}
-                            {% for message in messages %}
-                            <div class="alert alert-primary">
-                                <strong>{{ message }}</strong>
-                            </div>
-                            {% endfor %}
-                            {% endif %}
-                            {% endwith %}
-                        </p>
-                    </center>
-                    <button class="btn btn-lg btn-primary btn-block" id="get-crypto-btn"
-                        type="submit">{{ form_btn_text }}</button>
-                </form>
-            </div>
-        </center>
-    </div>
-    <div class="crypto-icns" id="icns-div">
-        <img src="/static/images/eth.png">
-        <img src="/static/images/btc.png">
-        <img src="/static/images/eth.png">
-        <img src="/static/images/xmr.png">
-        <img src="/static/images/eth.png">
-        <img src="/static/images/btc.png">
-        <img src="/static/images/doge.png">
-        <img src="/static/images/eth.png">
-    </div>
-    <style>
-        .crypto-icns {
-            width: 100%;
+    <div style="overflow-x: hidden;">
+        <div class="banner-container" style="position: absolute; width: 100%; top: 150px;">
+            <iframe data-aa="1624312" src="//ad.a-ads.com/1624312?size=120x600" scrolling="no" style="
+            width:120px;
+            height:600px;
+            border:0px;
+            padding:0;
+            overflow:hidden;
+            " allowtransparency="true"></iframe>
+            <iframe data-aa="1624312" src="//ad.a-ads.com/1624312?size=120x600" scrolling="no" style="
+            width:120px;
+            height:600px;
+            border:0px;
+            padding:0;
+            overflow:hidden;
             position: absolute;
-            bottom: 0%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            z-index: -1;
-        }
-    </style>
+            right: 0%;
+            " allowtransparency="true"></iframe>
+        </div>
+        <div class="navbar">
+            <a href="/">
+                <div class="navbar-brand" data-tilt data-tilt-scale="1.2">
+                    Cryptotap
+                </div>
+            </a>
+            <div class="trade-btn"><a href="https://www.binance.com/en-IN/register?ref=82653973" target="_blank"
+                    class="gradient-btn cta">Trade Crypto</a></div>
+        </div>
+        <br>
+        <div class="text-center">
+            <center>
+                <div class="form-card">
+                    <form id="claim-form" method="POST">
+                        <img class="mb-4" src={{ form_img }} width="150px">
+                        <h3 class="mb-3 font-weight-normal" style="color: white;">{{ form_title }}</h3>
+                        <label for="wallet-addr" class="sr-only" style="color: white;">{{ form_input_label }}</label>
+                        <input type="text" id="wallet-addr" name="wallet-addr" class="form-control"
+                            placeholder="Your {{ form_input_label }}" required autofocus>
+                        <center>
+                            <div class="g-recaptcha" data-sitekey="6LfVZ7UaAAAAALz724aZrsBi8eQ5G2NVTFLeUq0B"></div>
+                            <p>
+                                {% with messages = get_flashed_messages() %}
+                                {% if messages %}
+                                {% for message in messages %}
+                                <div class="alert alert-primary">
+                                    <strong>{{ message }}</strong>
+                                </div>
+                                {% endfor %}
+                                {% endif %}
+                                {% endwith %}
+                            </p>
+                        </center>
+                        <button class="btn btn-lg btn-primary btn-block" id="get-crypto-btn"
+                            type="submit">{{ form_btn_text }}</button>
+                    </form>
+                </div>
+            </center>
+        </div>
+        <div class="crypto-icns" id="icns-div">
+            <img src="/static/images/eth.png">
+            <img src="/static/images/btc.png">
+            <img src="/static/images/eth.png">
+            <img src="/static/images/xmr.png">
+            <img src="/static/images/eth.png">
+            <img src="/static/images/btc.png">
+            <img src="/static/images/doge.png">
+            <img src="/static/images/eth.png">
+        </div>
+        <style>
+            .crypto-icns {
+                width: 100%;
+                position: absolute;
+                bottom: 0%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                z-index: -1;
+            }
+        </style>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
         integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
         crossorigin="anonymous"></script>
