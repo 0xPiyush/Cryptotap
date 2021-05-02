@@ -3,7 +3,6 @@ var claimForm = document.getElementById('claim-form');
 claimForm.addEventListener('submit', function (event) {
     const button = document.getElementById('get-crypto-btn')
     button.disabled = true;
-    button.data = 'Please Wait..';
     event.preventDefault();
     var formData = new FormData(claimForm)
     var validAddr = WAValidator.validate(formData.get('wallet-addr'), coin);
